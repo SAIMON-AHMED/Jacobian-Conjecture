@@ -1,0 +1,49 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+*.log
+*.tmp
+
+# === Jupyter or IPython ===
+.ipynb_checkpoints/
+
+# === VS Code ===
+.vscode/
+*.code-workspace
+
+# === Environments ===
+.env/
+.venv/
+env/
+venv/
+*.env
+
+# === OS-generated files ===
+.DS_Store
+Thumbs.db
+
+# === Streamlit Cache ===
+.streamlit/
+*.streamlit/
+
+# === Build / Distribution ===
+build/
+dist/
+*.egg-info/
+
+# === Test Artifacts ===
+coverage/
+*.cover
+*.py,cover
+.cache/
+.nox/
+.tox/
+pytest_cache/
+htmlcov/
+
+# === SageMath artifacts (optional) ===
+*.sage.py
+*.sage.pyc
