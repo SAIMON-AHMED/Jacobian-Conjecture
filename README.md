@@ -10,7 +10,6 @@ This repository accompanies the research paper:
 - Fully reproducible with test suite and examples
 
 ## Contents
-- `/src`: SageMath scripts to generate and verify maps
 - `/tests`: Determinant and inversion tests
 - `/app`: Streamlit GUI app
 - `/paper`: LaTeX version of the full research paper
