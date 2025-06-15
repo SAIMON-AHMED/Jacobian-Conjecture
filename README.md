@@ -16,6 +16,19 @@ This repository accompanies the research paper:
 - `/paper`: LaTeX version of the full research paper
 
 ## Getting Started
-1. Install [SageMath](https://www.sagemath.org/)
-2. Run a map generator:
-3. Launch GUI:
+
+This repository contains a Python implementation of a public-key cryptosystem based on Jacobian-preserving polynomial composition. It includes triangular and affine map generators, encryption and decryption routines, and a benchmark script.
+
+### Requirements
+
+- Python 3.9+
+- sympy
+- numpy
+- matplotlib
+- pandas
+- streamlit (optional, for GUI)
+
+Install dependencies with:
+
+```bash
+pip install -r requirements.txt
