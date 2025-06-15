@@ -23,8 +23,6 @@ This repository contains a Python implementation of a public-key cryptosystem ba
 - Python 3.9+
 - sympy
 - numpy
-- matplotlib
-- pandas
 - streamlit (optional, for GUI)
 
 Install dependencies with:
