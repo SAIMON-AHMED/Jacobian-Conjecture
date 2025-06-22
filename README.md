@@ -44,12 +44,14 @@ Install the required packages:
 
 ```bash
 pip install -r requirements.txt
-
 ```
 To run the app:
 ```bash
 streamlit run app/app.py
+```
+## License
 
+This project is licensed under the terms of the MIT License.
 
 
 
