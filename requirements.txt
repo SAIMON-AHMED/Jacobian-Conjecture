@@ -1,7 +1,11 @@
+Python 3.9 or higher
 numpy>=1.24
 sympy>=1.12
 streamlit>=1.45
 
 
+
+
 # install the requirements with:
 pip install -r requirements.txt
+
