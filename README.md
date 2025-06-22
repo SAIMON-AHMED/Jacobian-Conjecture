@@ -1,32 +1,39 @@
 # Jacobian-Based Public-Key Cryptosystem
 
-This repository accompanies the research paper:  
-“A Polynomial Public-Key Cryptosystem Based on Jacobian-Preserving Composition.”
+This repository supports the research paper:
+
+**"A Polynomial Public-Key Cryptosystem Based on Jacobian-Preserving Composition"**  
+By Saimon Ahmed  
+[Read the paper (PDF)](https://github.com/SAIMON-AHMED/Jacobian-Conjecture/blob/main/paper/jacobian_crypto.pdf)
+
+---
+
+## Overview
+
+This project implements a novel public-key encryption scheme based on **compositions of invertible polynomial maps** with Jacobian determinant equal to 1. Inspired by the Jacobian Conjecture and designed for post-quantum resilience, the scheme uses structured triangular and affine maps to build algebraically secure trapdoor functions.
+
+---
 
 ## Features
-- Generate triangular and affine maps with Jacobian determinant = 1
-- Symbolically verify invertibility and algebraic security
-- GUI for generating and inspecting maps
-- Fully reproducible with test suite and examples
 
-## Contents
-- `/tests`: Determinant and inversion tests
-- `/app`: Streamlit GUI app
-- `/paper`: LaTeX version of the full research paper
+- Generate upper and lower triangular maps with symbolic Jacobian = 1
+- Construct affine maps with modular invertibility
+- Compose maps for public key; invert using private sequence
+- Symbolically verify Jacobians and inversion correctness
+- Benchmark runtime over varying numbers of variables
+- Streamlit GUI for interactive exploration
 
-## Getting Started
+---
 
-This repository contains a Python implementation of a public-key cryptosystem based on Jacobian-preserving polynomial composition. It includes triangular and affine map generators, encryption and decryption routines, and a benchmark script.
-
-### Requirements
-
-- Python 3.9+
-- sympy
-- numpy
-- streamlit (optional, for GUI)
-
-
-Install dependencies with:
+## Directory Structure
 
 ```bash
-pip install -r requirements.txt
+Jacobian-Conjecture/
+├── app/           # Streamlit GUI for map generation & inspection
+├── benchmark/     # Runtime tests and benchmark plots
+├── paper/         # LaTeX version of the full research paper
+├── src/           # Core implementation (map generators, Jacobians, etc.)
+├── tests/         # Unit tests for determinant, invertibility, etc.
+├── LICENSE        # MIT License
+├── requirements.txt
+└── README.md
