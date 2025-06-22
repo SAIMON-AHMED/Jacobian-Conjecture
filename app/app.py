@@ -68,16 +68,24 @@ if mode == "Generate Maps":
     def generate_affine():
         maps = []
         for _ in range(num_maps):
-            A = sp.eye(n_vars)
-            for i in range(n_vars):
-                for j in range(n_vars):
-                    if i != j:
-                        A[i, j] = random.randint(0, 2)
-            b = sp.Matrix([random.randint(0, 5) for _ in range(n_vars)])
-            components = list(A * sp.Matrix(variables) + b)
-            maps.append(components)
-        return maps
+            while True:
+                # Random invertible matrix over Z_p (Jacobian condition)
+                A = sp.eye(n_vars)
+                for i in range(n_vars):
+                    for j in range(n_vars):
+                        if i != j:
+                            A[i, j] = random.randint(0, 2)
+                # Check if determinant == 1 over integers
+                if A.det() == 1:
+                    break  # valid map found
 
+        # Random translation vector
+        b = sp.Matrix([random.randint(0, 5) for _ in range(n_vars)])
+        components = list(A * sp.Matrix(variables) + b)
+        maps.append(components)
+
+        return maps
+        
     if st.button("Generate Maps"):
         if map_type == "Upper Triangular":
             st.session_state.maps = {
