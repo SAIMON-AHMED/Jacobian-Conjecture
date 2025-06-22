@@ -37,3 +37,19 @@ Jacobian-Conjecture/
 ├── LICENSE        # MIT License
 ├── requirements.txt
 └── README.md
+```
+## Getting Started
+
+Install the required packages:
+
+```bash
+pip install -r requirements.txt
+
+```
+To run the app:
+```bash
+streamlit run app/app.py
+
+
+
+
