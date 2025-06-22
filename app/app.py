@@ -77,12 +77,11 @@ if mode == "Generate Maps":
                             A[i, j] = random.randint(0, 2)
                 # Check if determinant == 1 over integers
                 if A.det() == 1:
+                    # Random translation vector
+                    b = sp.Matrix([random.randint(0, 5) for _ in range(n_vars)])
+                    components = list(A * sp.Matrix(variables) + b)
+                    maps.append(components)
                     break  # valid map found
-
-        # Random translation vector
-        b = sp.Matrix([random.randint(0, 5) for _ in range(n_vars)])
-        components = list(A * sp.Matrix(variables) + b)
-        maps.append(components)
 
         return maps
 
