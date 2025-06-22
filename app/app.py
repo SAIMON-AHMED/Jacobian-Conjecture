@@ -86,7 +86,6 @@ if mode == "Generate Maps":
 
         return maps
 
-
     if st.button("Generate Maps"):
         if map_type == "Upper Triangular":
             st.session_state.maps = {
